@@ -1,0 +1,24 @@
+body{
+    background-color: peachpuff;
+    
+}
+
+.awesome-text{
+    color: rebeccapurple;
+}
+
+
+#raphael{
+    color: burlywood;
+}
+
+#navbar .navitem .activeitem{
+    background-color: black;
+    
+}
+
+
+#navbar .navitem {
+    background-color: red;
+    
+}
