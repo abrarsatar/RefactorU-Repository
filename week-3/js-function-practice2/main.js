@@ -165,8 +165,6 @@ var unique = function(myarray){
             }
             
     }  return finalarray
-  
-
-    
 }
-unique(['todd', 'avery', 'maria', 'avery']) 
+
+unique(['todd', 'avery', 'maria', 'avery', 'a']) 
