@@ -1,16 +1,26 @@
-// Write a script that reports on several different aspects of the user's browsing behavior. Since the metrics depend on scrolling, create a long, one-page landing page prototype to test this on.
-
-// Add a button with position: fixed that the user can click to view the metrics collected so far. Metrics collection should be paused when this happens, and resumed afterwards. 
-// You can display the results in a manner of your choice (alert, lightbox, etc).
 
 // What percentage of the page was viewed
 // Total Distance Scrolled
 
-// Time before clicking Sign Up
-// Time spent on page
 // Time spent on each section of the page
 
+var start = Date.now()
+var signtime
+var clicktime
+var totaltime
+
+
+// Time before clicking Sign Up
+
+ document.getElementById("signup").onclick = function() {
+            signtime = Date.now()
+            clicktime = (signtime - start) / 1000
+            return clicktime;
+        }
+        
+// Time spent on page
 
 document.getElementById("collector").onclick = function() {
-    return alert("metrics yo");
+    totaltime = (Date.now() - start) / 1000;
+    return alert("It took " + clicktime + " seconds to click signup." + "And they have been on the page for " + totaltime + " seconds");
 }
