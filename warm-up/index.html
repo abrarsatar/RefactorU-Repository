@@ -1,14 +1,34 @@
-    <html>
+    <html ng-app="Zordon">
         <head>
-            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-            <link href="styles.css" rel="stylesheet">
-            <style>
+            <title> Angular Intro </title>
+      
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+            <script type="text/javascript" src="main.js"></script>
 
-            </style>
         </head>
-        <body>
-            <section id="wrapper">
 
-            </section>
+        <body ng-controller="alpha">
+            <h1>{{ greeting }}</h1>
+            <h3 ng-bind="inner"></h3>
+            <button ng-click = "fightPutty()">Fight putty</button>
+         
+            <button ng-click = "clickList()">Make a list. </button> 
+         
+         <div ng-show="showMe">
+            <ul>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+
+
         </body>
     </html>
+    
+
+
+
+
+
+    
