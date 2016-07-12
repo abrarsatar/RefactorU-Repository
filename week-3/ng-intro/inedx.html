@@ -1,12 +1,8 @@
-<!--When a paragraph is moused over, turn the text of that paragraph pink.-->
-<!--Add an exclamation point to the end of each heading.-->
-<!--When a link is styleed, confirm that the user wants to navigate to that url. 
-<!--If the user clicks OK, allow the default behavior of the link to be executed. If the user clicks cancel, cancel the default browser behavior by calling event.preventDefault() on the event object.-->
-<!--When a link is clicked and the user chooses not to go to the url, remove the link from the DOM.-->
-<!--Part III-->
 <!--Create an HTML page with one giant button in the center.-->
 <!--When the giant button is clicked, a 'popup' is revealed. The popup is simply a div containing some HTML content, which has a class applied making it appear with position: fixed in the middle of the page.-->
 <!--Add a close button to the popup. When clicked, the popup should be hidden.-->
+
+<!--Make sure the giant button still works to create a popup even after one is opened and closed.-->
 
 
     <html ng-app="myApp">
@@ -15,61 +11,44 @@
       
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
             <script type="text/javascript" src="main.js"></script>
+            <link rel = "stylesheet" href = 'main.css'>
 
         </head>
 
         <body ng-controller="alphaCtrl as alpha">
-             <div>
-                 <h1>First Header {{alpha.exclaim}}</h1>
-                 <p ng-mouseover="alpha.hover()" ng-style=alpha.myStyle >
-                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
-                     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-                     <a href="">Hello</a>
+ 
+ 
+            <button class = "button" ng-click = alpha.lightbox() >
+                 Giant Button
+            </button>
+ 
+ 
+             <div class = "lightbox"  ng-show = "alpha.backshow">
+                 
+                     <h3>Some HTML text here</h3>
+                <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. -->
+                Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." 
                  </p>
                  
-                 <!--    <h1>First Header</h1>-->
-                 <!--<p ng-mouseover="alpha.hover(1)" ng-mouseleave="alpha.leave(1)" ng-style="myStyle">-->
-                 <!--    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. -->
-                 <!--    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. -->
-                 <!--    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. -->
-                 <!--    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."-->
-                 <!--                         <a href="">Hello</a>-->
-
-                 <!--</p>-->
-                 
-                 <!--    <h1>First Header</h1>-->
-                 <!--<p ng-mouseover="alpha.hover(2)" ng-mouseleave="alpha.leave(2)" ng-style="myStyle">-->
-                 <!--    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. -->
-                 <!--    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. -->
-                 <!--    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. -->
-                 <!--    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."-->
-                 <!--    <a href="">Hello</a>-->
-
-                 <!--</p>-->
-                 
-                 <!--    <h1>First Header</h1>-->
-                 <!--<p ng-mouseover="alpha.hover(3)" ng-mouseleave="alpha.leave(3)" ng-style="myStyle">-->
-                 <!--    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. -->
-                 <!--    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. -->
-                 <!--    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. -->
-                 <!--    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."-->
-                 <!--    <a href="">Hello</a>-->
-
-
-                 <!--</p>-->
-                 
-                 <!--    <h1>First Header</h1>-->
-                 <!--<p ng-mouseover="alpha.hover(4)" ng-mouseleave="alpha.leave(4)" ng-style="myStyle">-->
-                 <!--    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. -->
-                 <!--    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. -->
-                 <!--    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. -->
-                 <!--    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."-->
-                 <!--</p>-->
+                 <button class ="button" style = "background:red" ng-click = "alpha.lightbox()">Close</button>
              </div>
-             
-             
+           
+           <!--<div  >-->
+               
+           <!--    <h1> Header {{alpha.exclaim}} </h1>-->
+           <!--    <p ng-style = "style" ng-mouseover = "style = {color:'pink'} " >-->
+           <!--     "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. -->
+           <!--     Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. -->
+           <!--     Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. -->
+           <!--     Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." -->
+           <!--     </p>-->
+           <!--     <hr>-->
+                
+           <!--     <a ng-show = "alpha.sight" ng-click ="alpha.confirm()" href = "http://www.google.com" > Go to google </a>-->
+           <!-- </div>-->
+            
 
         </body>
     </html>

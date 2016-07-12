@@ -1,34 +1,69 @@
-console.log(angular)
+angular.module("PokeApp", [ ]);
 
-angular.module('Zordon', [ ])
-
-
-angular.module('Zordon')
-    .controller('alpha', [ 
-        '$scope', '$http', alphaCtrl
-    ]);
+angular.module("PokeApp")
+    .controller("PallettTown", [palletCtrl] );
     
-     function alphaCtrl($scope , $http){
+
+function palletCtrl(){
+    
+    var pCtrl = this ;
+    pCtrl.welcomeMessage = "Gotta Catch'em All!";
+    
+    pCtrl.pokemon = [
+        "Charmander", 
+        "Bulbasaur",
+        "squirtle",
+        "Vegetable",
+        "2Scoops",
+        "Jigglypuff"
         
-      $scope.fightPutty = function() {
-        console.log('putty dissapears');
-        $scope.greeting = "Welcome to the command center";
-
-    }  
+        ];
     
-    $scope.showMe = false;
+    pCtrl.jigglyPuff = {
+        squishiness : 7,
+        rage        : 'irate',
+        rockstar    : 'jigglypugg'
+    };   
     
-    $scope.clickList = function() {
-        $scope.showMe = !$scope.showMe;
+       pCtrl.clonedPokemon = [
+        "Charmander", 
+        "Bulbasaur",
+        "squirtle",
+        "Vegetable",
+        "2Scoops",
+        "Jigglypuff",
+        "Bulbasaur",
+        "Bulbasaur",
+        "Bulbasaur",
+        "squirtle",
+        "squirtle",
+        "squirtle",
+         "Charmander", 
+        "Bulbasaur",
+        "Charmander", 
+        "Bulbasaur",
+        ];
+        
+        pCtrl.trainers = [ 
+        
+            {
+                name    : "Ash",
+                badges  : ["Earth", "Wind", "Fire"],
+                skill   : 1,
+      },
+      
+               {
+                name    : "Misty",
+                badges  : ["Water"],
+                skill   : 3,
+      },
+      
+               {
+                name    : "Brock",
+                badges  : ["Rock"],
+                skill   : 5,
+      },
+      ];
     
-    }
-
-    $scope.showMe = false;
-    $scope.myFunc = function() {
-        $scope.showMe = !$scope.showMe;
-    }   
-                
-    }
-   
     
-   
+}
