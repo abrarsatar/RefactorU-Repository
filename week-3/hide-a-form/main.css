@@ -1,0 +1,61 @@
+body {
+    margin:0;
+    padding:0;
+}
+
+
+.userprofile {
+    margin:auto;
+    margin-top:15px;
+    background-color:#EFF0F1; 
+    min-height:300px;
+    width:80%;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding:10px;
+    
+    
+}
+
+.userprofile img{
+    float:left;
+    display:inline-block;
+}
+
+
+.userprofile h3{
+    display:inline-block;
+}
+
+
+#button {
+    float:right;
+    margin-right: 30px;
+    
+}
+
+.form {
+    z-index:1;
+    background-color: white;
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    opacity:.6;
+}
+
+.editarea {
+    z-index:2;
+    background-color: #CFCFCF;
+    min-height:300px;
+    min-width:30%;
+    margin:auto;
+    margin-top: 30px;
+    opacity:1;
+    position:fixed;
+    top:5%;
+    left:10%;
+    border:1px solid black;
+    border-radius:15px;
+    padding:25px;
+}

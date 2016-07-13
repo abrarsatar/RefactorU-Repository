@@ -1,0 +1,91 @@
+<html ng-app = "myApp">
+    <head>
+        <title> Angular Pop Up </title>
+      
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+            <script type="text/javascript" src="main.js"></script>
+            <link rel = "stylesheet" href = 'main.css'>
+        
+    </head>
+    
+    <body ng-controller = "alphaCtrl as alpha">
+       
+        <div class= "userprofile" >
+            <img src = "https://image.freepik.com/free-icon/super-simple-avatar_318-1018.jpg" style = "width:100px">
+            
+            
+            
+            <div id="button" ng-click = "alpha.editClick()" ng-show = "alpha.change"> 
+            <br>
+            <a href = "" > <img src = "https://cdn4.iconfinder.com/data/icons/dashboard-icons/46/icon-edit-128.png" style = "width:20px"> </a>
+            </div>
+            
+            <br>
+            
+            <h3> Name:</h3>
+            <p style = "display:inline-block;" > {{alpha.myObject.Name}} </p>
+            
+      
+            <br>
+            <br>
+            <hr>
+            
+            
+            <h3> Bio:</h3>
+            <p>{{alpha.myObject.bio}}</p>
+            
+            <h3>Favorite Books:</h3>
+            <p>{{alpha.myObject.fBooks}}</p>
+         
+            <h3> Favorite JS:</h3>
+            <p>{{alpha.myObject.faveJS}}</p>
+            
+        </div>
+        
+          
+        
+        
+        <div class = "form" ng-show = "!alpha.change">
+         
+        
+        </div>
+        
+        <div class= "editarea" ng-show = "!alpha.change" >
+              <h1> Edit Info </h1>
+              
+              
+              
+              
+              
+              <h3>Name:</h3>
+              <input type = "form" ng-model = "alpha.newObject.Name">
+              
+              
+            
+              
+              
+              
+              
+              
+              <h3>Bio:</h3>
+              <input type = "form" style = "width:200px; height:150px" ng-model = "alpha.newObject.bio"">
+              
+              <h3>Favorite Books:</h3>
+              <input type = "form" style = "width:200px; height:150px" ng-model = "alpha.newObject.fBooks"">
+            
+              <h3>Favorite Javascript Libraries:</h3>
+              <input type = "form" style = "width:200px; height:150px" ng-model = "alpha.newObject.faveJS">
+              
+              
+              <button ng-click = "alpha.newText()"> Click Here to submit!</button>
+              
+              
+              <div>
+                  
+              </div>
+        </div>
+        
+    </body>
+    
+    
+</html>
