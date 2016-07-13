@@ -1,0 +1,42 @@
+<html ng-app = "myApp">
+       <head >
+            <title> Angular Edit in place </title>
+      
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+            <script type="text/javascript" src="main.js"></script>
+            <link rel = "stylesheet" href = 'main.css'>
+
+        </head>
+        <body ng-controller = "alphaCtrl as alpha">
+            
+            <div class = "profile">
+                <img src = "https://image.freepik.com/free-icon/super-simple-avatar_318-1018.jpg" style = "width:100px">
+                
+                <h3>Name:</h3> 
+                <p ng-dblclick = "alpha.edit(0)" ng-show = "alpha.change[0]" > {{alpha.inputs[0]}} </p> 
+                <input type = "form" ng-show = "!alpha.change[0]"  ng-blur = "alpha.newtext(0)" ng-model = "alpha.value[0]" >  <br />
+                
+                <h3> Email:</h3> 
+                <p ng-dblclick = "alpha.edit(1)" ng-show = "alpha.change[1]">{{alpha.inputs[1]}}</p> 
+                <input type = "form" ng-show = "!alpha.change[1]" ng-blur = "alpha.newtext(1)" ng-model = "alpha.value[1]">
+                <hr>
+                
+                <h3>Bio:</h3><br />
+                <p ng-dblclick = "alpha.edit(2)" ng-show = "alpha.change[2]"> {{alpha.inputs[2]}}
+                </p>
+                <input type = "form" ng-show = "!alpha.change[2]" ng-blur = "alpha.newtext(2)" ng-model = "alpha.value[2]" style = "height:100px; width:80%">
+                <hr>
+                 
+                
+                
+                
+                
+            </div>
+            
+            
+            
+        </body>
+    
+    
+    
+</html>
