@@ -1,0 +1,33 @@
+<!--When the user clicks on the map, create a new DOM element and position it where they clicked.-->
+<!--You can access the mouse coordinates with the pageX and pageY properties of the event object.-->
+<!--You can position the marker by setting it to position: absolute, its container to position: relative, and its left and top css properties to a calculated value based on the mouse coordinate.-->
+
+<html ng-app = "myApp">
+    <head>
+         <title> Angular Pop Up </title>
+      
+            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+            <script type="text/javascript" src="main.js"></script>
+            <link rel = "stylesheet" href = 'main.css'>
+    </head>
+    
+    <body ng-controller = "myControl as alpha">
+        
+        <div class = "container" ng-click = "alpha.myLocation()">
+        <img src = "http://www.lib.utexas.edu/maps/topo/colorado/pclmaps-topo-co-home-1916.jpg"    >
+        </div>
+        
+        <div class = "marker"  ng-repeat = "n in alpha.myArray" >
+            
+            
+            <img style = {{n}} src = "http://www.clker.com/cliparts/B/B/1/E/y/r/marker-pin-google.svg">
+            
+        </div>
+        
+        
+        
+        
+    </body>
+    
+    
+</html>

@@ -1,0 +1,21 @@
+html,body {
+    margin:0;
+    padding:0;
+    
+
+}
+
+.marker img{
+    z-index: 1;
+    width:100px;
+    position: absolute;
+    
+    
+}
+
+.container img{
+    width: 120%;
+    height:120%;
+    
+    
+}

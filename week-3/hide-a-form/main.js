@@ -1,10 +1,10 @@
 angular.module("myApp", [ ])
 
 angular.module("myApp")
-    .controller("alphaCtrl", alphaCtrl)
+.controller("alphaCtrl", alpha)
     
 
-function alphaCtrl() {
+function alpha() {
     
     var alpha = this
     
