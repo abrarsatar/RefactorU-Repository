@@ -13,14 +13,20 @@
     
     <body ng-controller = "myControl as alpha">
         
-        <div class = "container" ng-click = "alpha.myLocation()">
-        <img src = "http://www.lib.utexas.edu/maps/topo/colorado/pclmaps-topo-co-home-1916.jpg"    >
+        <div class = "container" ng-click = "alpha.myLocation()" >
+        <img src = "http://www.lib.utexas.edu/maps/topo/colorado/pclmaps-topo-co-home-1916.jpg" style = "width : 500px height:300px"   >
         </div>
         
-        <div class = "marker"  ng-repeat = "n in alpha.myArray" >
+        <!--<h3>Notes</h3>-->
+        <div class = "marker" ng-click= " alpha.remove($index)"  ng-repeat = "n in alpha.myArray track by $index" >
+            
+           
+            <a href = "" > <img style = {{n}} src = "http://www.clker.com/cliparts/B/B/1/E/y/r/marker-pin-google.svg"  >   </a>
             
             
-            <img style = {{n}} src = "http://www.clker.com/cliparts/B/B/1/E/y/r/marker-pin-google.svg">
+            <!--<p                  style = {{n}}       ng-click = "alpha.editText($index)" ng-show = "!alpha.visible" ng-model = "alpha.setNewNote.$index" >{{$index}} {{alpha.note.$index}}  </p>-->
+            
+            <!--<input type = "form"  style = {{n}}     ng-blur = "alpha.makeNote($index)"  ng-show = "alpha.visible" ng-model = "alpha.setNewText.$index">-->
             
         </div>
         

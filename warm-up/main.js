@@ -1,69 +1,91 @@
-angular.module("PokeApp", [ ]);
+angular.module("CakeApp", [ ])
+    .controller("menuController" , 
+    ['CheesecakeFactory',
+    menuController])
+    
+    
+    .controller("menuOrderController" ,
+        [ 
+        'CheesecakeFactory',
+        menuOrderController])
+        
+        
+        
+    .factory('CheesecakeFactory', CheesecakeFactory)
 
-angular.module("PokeApp")
-    .controller("PallettTown", [palletCtrl] );
-    
 
-function palletCtrl(){
+function menuController(CheesecakeFactory) {
+   
+   console.log("menuController is loaded")
     
-    var pCtrl = this ;
-    pCtrl.welcomeMessage = "Gotta Catch'em All!";
+    var menu = this
+    menu.items = CheesecakeFactory.menuItems;
+    menu.title = 'Awesome Sauce'
     
-    pCtrl.pokemon = [
-        "Charmander", 
-        "Bulbasaur",
-        "squirtle",
-        "Vegetable",
-        "2Scoops",
-        "Jigglypuff"
+    menu.lowCalories = function (menuItem) {
+    return menuItem.calories < 2000    
+    }
+    
+    
+}    
+
+
+
+
+function menuOrderController(CheesecakeFactory){
+ console.log("menuOrderController is loaded", CheesecakeFactory)
+    var menu = this
+    menu.items = CheesecakeFactory.menuItems;
+
+    
+}
+
+
+
+
+
+
+
+function CheesecakeFactory () {
+    
+    console.log("factory is loaded")
+    
+    var menuItems = [
+        {
+        name: 'Egg Roll',
+        calories: 6000,
+        deliciousness: 3,
+        flavor: 'southwestern',
+        price: 50
+       
+        },
+          {
+        name: 'strawberry cheesecake',
+        calories: 1500,
+        deliciousness: 9,
+        flavor: 'strawberry',
+        price: 9.95 
+
+        },
+          {
+        name: 'Turtle Cheesecake',
+        calories: 1800 ,
+        deliciousness: 10,
+        flavor: 'Chocolate Turtle',
+        price: 13,
+        }
+        ]
+    
+    
+    
+    var MenuTitle = "Lunch & Dinner"
+    
+    return {
+        menuItems: menuItems,
+        title: MenuTitle,
         
-        ];
-    
-    pCtrl.jigglyPuff = {
-        squishiness : 7,
-        rage        : 'irate',
-        rockstar    : 'jigglypugg'
-    };   
-    
-       pCtrl.clonedPokemon = [
-        "Charmander", 
-        "Bulbasaur",
-        "squirtle",
-        "Vegetable",
-        "2Scoops",
-        "Jigglypuff",
-        "Bulbasaur",
-        "Bulbasaur",
-        "Bulbasaur",
-        "squirtle",
-        "squirtle",
-        "squirtle",
-         "Charmander", 
-        "Bulbasaur",
-        "Charmander", 
-        "Bulbasaur",
-        ];
         
-        pCtrl.trainers = [ 
+    }
         
-            {
-                name    : "Ash",
-                badges  : ["Earth", "Wind", "Fire"],
-                skill   : 1,
-      },
-      
-               {
-                name    : "Misty",
-                badges  : ["Water"],
-                skill   : 3,
-      },
-      
-               {
-                name    : "Brock",
-                badges  : ["Rock"],
-                skill   : 5,
-      },
-      ];
-    
     
 }

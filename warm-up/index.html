@@ -1,41 +1,40 @@
-    <html ng-app = "PokeApp">
+    <html ng-app = "CakeApp">
         <head>
-            <title> NG Repeat </title>
-      
+            <title> NG </title>
+            
+            
+            <script type = "style" src = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
             <script type="text/javascript" src="main.js"></script>
 
         </head>
 
-        <body ng-controller = "PallettTown as pCtrl">
-            <h1> {{ pCtrl.welcomeMessage }} </h1>
-            
-            <!--<ul>-->
-            <!--    <li ng-repeat = "pokemon in pCtrl.clonedPokemon track by $index">-->
-            <!--        {{ pokemon }}-->
-            <!--    </li>-->
-            <!--</ul>-->
-            
-            <!--<div ng-repeat = "(jigKey, jigVal) in pCtrl.jigglyPuff">-->
+        <body class = "container">
+            <div ng-controller = "menuController as menu">
+                <h1>{{menu.title}}</h1>
                 
-            <!--    <h3>{{jigKey}}</h3>-->
-            <!--    <h6>{{jigVal}}</h6>-->
-            <!--    <hr>-->
-            <!--</div>-->
-            
-           <ul>
-               <li ng-repeat = "trainer in pCtrl.trainers">
-                   <h3>{{trainer.name}}</h3>
-                   <p>Skillz: {{trainer.skill}}</p>
-                   
-                   <ul>
-                       <li ng-repeat = "badge in trainer.badges">
-                           {{badge}}
-                       </li>
-                   </ul>
-                   
-               </li>
-           </ul> 
+                <!--<fieldset class = 'row'>-->
+                <!--<input type = "text" class = "form-control" placeholder = "Search" ng-model = "menu.search">-->
+                <!--</fieldset>-->
+                
+                
+                <ul>
+                    <li ng-repeat = "item in menu.items | filter: menu.lowCalories">
+                        {{item.name}} - <b>${{item.price}},</b> calories : {{item.calories}}
+                    </li>
+                </ul>
+           
+           <fieldset>
+               
+           </fieldset>     
+           
+                
+                
+            </div>
+
+            <div ng-controller = "menuOrderController as MenuOrder">
+                
+            </div>
             
         </body>
     </html>

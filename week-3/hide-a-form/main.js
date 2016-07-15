@@ -39,8 +39,7 @@ function alpha() {
      alpha.myObject.bio=alpha.newObject.bio;
       alpha.myObject.fBooks=alpha.newObject.fBooks;
        alpha.myObject.faveJS=alpha.newObject.faveJS;
-    console.log()
-    
+
         
         
     }

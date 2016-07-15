@@ -1,13 +1,29 @@
 html,body {
     margin:0;
     padding:0;
+    /*background-image: url("http://www.lib.utexas.edu/maps/topo/colorado/pclmaps-topo-co-home-1916.jpg");*/
+    /*width:600px;*/
+    /*height:300px;*/
     
 
 }
 
+.marker a{
+    z-index:1;
+    background-color:black;
+}
+
+.marker p {
+    background-color:black;
+    z-index:1;
+    display: inline-block;
+    color:white;
+}
+
 .marker img{
     z-index: 1;
-    width:100px;
+    width:30px;
+   
     position: absolute;
     
     
@@ -16,6 +32,7 @@ html,body {
 .container img{
     width: 120%;
     height:120%;
-    
+    z-index:1;
+    overflow:hidden;
     
 }
