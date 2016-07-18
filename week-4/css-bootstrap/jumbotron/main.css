@@ -1,0 +1,113 @@
+html, body {
+    margin:0;
+    padding:0;
+    
+}
+
+.navbar {
+    background-color: #222222;
+    height:50px;
+    padding:0 20%;
+    margin:auto;
+    color:#9d9d9d;
+}
+
+.navbar a{
+    display: inline-block;
+    font-size:18px;
+    margin-top:10px;
+    
+}
+
+.navbar button,input{
+    float:right;
+
+    height:35px;
+    margin-top:7.5px;
+    margin-left:5px;
+    border-radius:3px;
+    border:1px solid #222222;
+}
+
+#signin {
+    background-color:#5cb85c;
+    color:white;
+    width:80px;
+    font-size:16px;
+}
+
+#password {
+    width:200px;
+}
+
+#email {
+    width:150px;
+    
+}
+
+
+.topbanner {
+    height:350px;
+    margin:auto;
+    width:100%;
+    background-color: #EEEEEE;
+    padding:0px 20%;    
+
+}
+
+.topbanner h1{
+    font-size:60px;
+    
+    
+}
+
+.topbanner p{
+    font-size:20px;
+}
+
+.innertext {
+    height:300px;
+    padding:1px;
+    width:60%;
+}
+
+.innertext button{
+    background-color: #337ab7;
+    height:50px;
+    border:1px solid #337ab7;
+    border-radius:10px;
+    color:white;
+    font-size: 16px;
+}
+
+.bottom {
+    height:300px;
+    padding:1px;
+    width:60%;
+    padding:1px 20%;
+}
+
+
+.listitem {
+    list-style-type: none;
+    width:28%;
+    display:inline-block;
+}
+
+.listitem button{
+    height:50px;
+    width:100px;
+    border:1px solid silver;
+    color:white;
+    border-radius: 10px
+    
+}
+
+
+
+@media (min-width : 1000px) {
+    .listitem li{
+        display:inline-block;
+    }
+    
+}
