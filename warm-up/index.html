@@ -1,40 +1,19 @@
-    <html ng-app = "CakeApp">
+    <html>
         <head>
-            <title> NG </title>
+            <title> OOP </title>
             
             
             <script type = "style" src = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
             <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
-            <script type="text/javascript" src="main.js"></script>
 
         </head>
 
-        <body class = "container">
-            <div ng-controller = "menuController as menu">
-                <h1>{{menu.title}}</h1>
-                
-                <!--<fieldset class = 'row'>-->
-                <!--<input type = "text" class = "form-control" placeholder = "Search" ng-model = "menu.search">-->
-                <!--</fieldset>-->
-                
-                
-                <ul>
-                    <li ng-repeat = "item in menu.items | filter: menu.lowCalories">
-                        {{item.name}} - <b>${{item.price}},</b> calories : {{item.calories}}
-                    </li>
-                </ul>
-           
-           <fieldset>
-               
-           </fieldset>     
-           
-                
-                
-            </div>
-
-            <div ng-controller = "menuOrderController as MenuOrder">
-                
-            </div>
-            
+        <body>
+   
+   
+   
+   
+   
+        <script type="text/javascript" src="main.js"></script>
         </body>
     </html>
