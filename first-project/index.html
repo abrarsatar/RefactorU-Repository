@@ -1,54 +1,104 @@
-<html>
+<html  ng-app = "myApp" >
     <head>
-    <link rel="stylesheet" href="main.css" />
-
-
-
-    <title>
-       Compensation Management
-    </title>
+        <!--jquery-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        
+        
+        <!--CSS bootstrap & main.css-->
+        
+        <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.css">
+        <link rel = "stylesheet" href = "main.css">
+        
+        <!--bootstrapJS-->
+        <script src = "https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.js"></script>
+        
+        <!--angularJS-->
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.7/angular.js"></script>
+        
+        
+        
+        <script type="text/javascript" src="main.js"></script>
+        
+        <!--google maps api info in angular-->
+         
+        
+        
+        <title> Run Tracker    </title>
     
     
     </head>
     
-    <body>
-       <div class = "entirebody">
-           <div class = "navbar">
-               <div id="navimg"><a href=""> <img src=".jpeg"/></div>
-               <ul id = "nav">
-                   <li class = "navigation"><a href=""> Home </a></li>
-                   <li class = "navigation"><a href=""> About </a></li>
-                   <li class = "navigation"><a href=""> Services </a></li>
-               </ul>
-           </div>
-           <div id="mainbody">
-               <div id = "maincontent">
-               <p>
-                   Hello World.
-               </p>
-               </div>
-                <button id="signin" type="button">Sign In</button>
-                <button id="signup" type="button">Sign up</button>
-
-
-               
-           </div>
+    <body  ng-controller = "alphaController as alpha">
         
         
+        <div ng-show = "alpha.home"> 
+            <nav class="container navbar navbar-default navbar-fixed-top">
+              
+                    
+                        <img src = "http://scholastic.ca/festival/printableresources/webart/allstar/7soccerball.jpg" >
+                        <h3>Trkr</h3>
+                    
+                        <ul class="nav nav-pills">
+                          <li role="presentation" class="active" ng-click = "alpha.homeClick()"><a href="#/">Home</a></li>
+                          <li role="presentation" ng-click = "alpha.profileClick()"><a href="#/profile">Profile</a></li>
+                        </ul>
+    
+            </nav>
+            
+            
+            
+            <div class="jumbotron container">
+                <h1>Trkr</h1>
+                <p>Track your in game performance.</p>
+                <form> <b>Username</b> <input type = "username"> 
+                
+                
+                <hr><b>Password</b> <input type = "password"></form>
+                <p><a class="btn btn-primary btn-lg" href="#" role="button">Sign In</a></p>
+            </div>
+            
+        </div>
+  
+  
+    <!--profile tab-->
+    
+     <div ng-show = "alpha.profile"> 
+            <nav class="container navbar navbar-default navbar-fixed-top">
+              
+                    
+                        <img src = "http://scholastic.ca/festival/printableresources/webart/allstar/7soccerball.jpg" >
+                        <h3>Trkr</h3>
+                    
+                        <ul class="nav nav-pills">
+                          <li role="presentation"  ng-click = "alpha.homeClick()"><a href="#/">Home</a></li>
+                          <li role="presentation" class="active" ng-click = "alpha.profileClick()"><a href="#/profile">Profile</a></li>
+                        </ul>
+    
+            </nav>
+            
+            
+            
+            <div class="jumbotron container">
+              
+              Hello
+                
+                <md-slider ng-model="alpha.myValue" min="5" max="500">
+                </md-slider>
+                              
+              
+              
+              
+            </div>
+            
         </div>
         
-        <div id="signindiv">
-           <h1>
-               Hello I am a form.
-           </h1>
-           <input type = form>
-           <input type = form>
-         
-       </div>
     
-    <script src="main.js"></script>   
+    
+    
+    
+    
+ 
     </body>
     
 
-    
 </html>
